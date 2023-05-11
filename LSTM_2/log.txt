@@ -1,0 +1,42 @@
+2023-04-25 14:08:40,508 INFO: Setting temporary cache path to LSTM_out\cache
+2023-04-25 14:08:40,508 INFO: ImmuneML: parsing the specification...
+
+2023-04-25 14:08:40,512 INFO: --- Entering: parse_encoder with parameters ('e1', 'CharToInt')
+2023-04-25 14:08:41,006 INFO: --- Exiting: parse_encoder
+2023-04-25 14:08:41,006 INFO: --- Entering: _parse_ml_method with parameters ('G1', {'LSTM': {'batch_size': 8, 'rnn_units': 128, 'embedding_dim': 32, 'epochs': 5}})
+2023-04-25 14:08:48,754 INFO: --- Exiting: _parse_ml_method
+2023-04-25 14:08:48,754 INFO: --- Entering: _parse_report with parameters ('GeneratorReport', 'GeneratorReportLSTM', SymbolTable())
+2023-04-25 14:08:50,037 INFO: DefaultParams: no default parameters were found for GeneratorReportLSTM. Proceeding...
+2023-04-25 14:08:50,037 INFO: --- Exiting: _parse_report
+2023-04-25 14:08:50,037 INFO: --- Entering: _parse_dataset with parameters ('d1', {'format': 'Generic', 'params': {'path': 'LSTM_dataset/sequences_under_30.tsv', 'is_repertoire': False, 'paired': False, 'region_type': 'FULL_SEQUENCE'}}, SymbolTable(), WindowsPath('LSTM_out'))
+2023-04-25 14:08:53,261 INFO: --- Exiting: _parse_dataset
+2023-04-25 14:08:53,261 INFO: --- Entering: parse_instruction with parameters ('machine_learning_instruction', {'type': 'GenerativeModel', 'generators': {'generator_1': {'dataset': 'd1', 'encoding': 'e1', 'ml_method': 'G1', 'report': 'GeneratorReport', 'amount': 20000}}}, SymbolTable(), WindowsPath('LSTM_out'))
+2023-04-25 14:08:53,285 INFO: DefaultParams: no default parameters were found for GenerativeModel. Proceeding...
+2023-04-25 14:08:53,311 INFO: --- Exiting: parse_instruction
+2023-04-25 14:08:53,318 INFO: Full specification is available at LSTM_out\full_generative_LSTM.yaml.
+
+2023-04-25 14:08:53,318 INFO: ImmuneML: starting the analysis...
+
+2023-04-25 14:08:53,318 INFO: Instruction 1/1 has started.
+2023-04-25 14:08:53,319 INFO: Encoding started...
+2023-04-25 14:08:55,846 INFO: Encoding finished.
+2023-04-25 14:53:18,144 WARNING: Detecting that an object or model or tf.train.Checkpoint is being deleted with unrestored values. See the following logs for the specific values in question. To silence these warnings, use `status.expect_partial()`. See https://www.tensorflow.org/api_docs/python/tf/train/Checkpoint#restorefor details about the status object returned by the restore function.
+2023-04-25 14:53:18,151 WARNING: Value in checkpoint could not be found in the restored object: (root).optimizer._iterations
+2023-04-25 14:53:18,152 WARNING: Value in checkpoint could not be found in the restored object: (root).optimizer._learning_rate
+2023-04-25 14:53:18,152 WARNING: Value in checkpoint could not be found in the restored object: (root).optimizer._variables.1
+2023-04-25 14:53:18,152 WARNING: Value in checkpoint could not be found in the restored object: (root).optimizer._variables.2
+2023-04-25 14:53:18,152 WARNING: Value in checkpoint could not be found in the restored object: (root).optimizer._variables.3
+2023-04-25 14:53:18,152 WARNING: Value in checkpoint could not be found in the restored object: (root).optimizer._variables.4
+2023-04-25 14:53:18,152 WARNING: Value in checkpoint could not be found in the restored object: (root).optimizer._variables.5
+2023-04-25 14:53:18,152 WARNING: Value in checkpoint could not be found in the restored object: (root).optimizer._variables.6
+2023-04-25 14:53:18,152 WARNING: Value in checkpoint could not be found in the restored object: (root).optimizer._variables.7
+2023-04-25 14:53:18,152 WARNING: Value in checkpoint could not be found in the restored object: (root).optimizer._variables.8
+2023-04-25 14:53:18,152 WARNING: Value in checkpoint could not be found in the restored object: (root).optimizer._variables.9
+2023-04-25 14:53:18,152 WARNING: Value in checkpoint could not be found in the restored object: (root).optimizer._variables.10
+2023-04-25 14:53:18,152 WARNING: Value in checkpoint could not be found in the restored object: (root).optimizer._variables.11
+2023-04-25 14:53:18,152 WARNING: Value in checkpoint could not be found in the restored object: (root).optimizer._variables.12
+2023-04-25 14:53:20,813 INFO: Instruction 1/1 has finished.
+2023-04-25 14:53:20,832 INFO: Generating HTML reports...
+2023-04-25 14:53:23,900 INFO: HTML reports are generated.
+2023-04-25 14:53:23,901 INFO: ImmuneML: finished analysis.
+

@@ -1,0 +1,28 @@
+2023-04-26 10:05:45,965 INFO: Setting temporary cache path to PWM_out\cache
+2023-04-26 10:05:45,966 INFO: ImmuneML: parsing the specification...
+
+2023-04-26 10:05:45,976 INFO: --- Entering: parse_encoder with parameters ('e1', 'OneHot')
+2023-04-26 10:05:46,634 INFO: --- Exiting: parse_encoder
+2023-04-26 10:05:46,634 INFO: --- Entering: _parse_ml_method with parameters ('G1', 'PWM')
+2023-04-26 10:05:53,694 INFO: --- Exiting: _parse_ml_method
+2023-04-26 10:05:53,695 INFO: --- Entering: _parse_report with parameters ('GeneratorReport', 'GeneratorReportPWM', SymbolTable())
+2023-04-26 10:05:54,965 INFO: DefaultParams: no default parameters were found for GeneratorReportPWM. Proceeding...
+2023-04-26 10:05:54,966 INFO: --- Exiting: _parse_report
+2023-04-26 10:05:54,966 INFO: --- Entering: _parse_dataset with parameters ('d1', {'format': 'Generic', 'params': {'path': 'LSTM_dataset/sequences_under_30.tsv', 'is_repertoire': False, 'paired': False, 'region_type': 'FULL_SEQUENCE'}}, SymbolTable(), WindowsPath('PWM_out'))
+2023-04-26 10:06:04,510 INFO: --- Exiting: _parse_dataset
+2023-04-26 10:06:04,510 INFO: --- Entering: parse_instruction with parameters ('machine_learning_instruction', {'type': 'GenerativeModel', 'generators': {'generator_1': {'encoding': 'e1', 'dataset': 'd1', 'ml_method': 'G1', 'report': 'GeneratorReport', 'amount': 20}}}, SymbolTable(), WindowsPath('PWM_out'))
+2023-04-26 10:06:04,544 INFO: DefaultParams: no default parameters were found for GenerativeModel. Proceeding...
+2023-04-26 10:06:09,148 INFO: --- Exiting: parse_instruction
+2023-04-26 10:06:09,156 INFO: Full specification is available at PWM_out\full_generative_PWM.yaml.
+
+2023-04-26 10:06:09,156 INFO: ImmuneML: starting the analysis...
+
+2023-04-26 10:06:09,157 INFO: Instruction 1/1 has started.
+2023-04-26 10:06:09,158 INFO: Encoding started...
+2023-04-26 10:06:12,940 INFO: Encoding finished.
+2023-04-26 10:06:16,224 WARNING: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+2023-04-26 10:18:21,720 INFO: Instruction 1/1 has finished.
+2023-04-26 10:18:21,747 INFO: Generating HTML reports...
+2023-04-26 10:18:21,870 INFO: HTML reports are generated.
+2023-04-26 10:18:21,880 INFO: ImmuneML: finished analysis.
+

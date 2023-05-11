@@ -1,0 +1,85 @@
+definitions:
+  datasets:
+    lstm1:
+      format: Generic
+      params:
+        import_empty_aa_sequences: false
+        import_empty_nt_sequences: true
+        import_illegal_characters: false
+        is_repertoire: false
+        paired: false
+        path: LSTM1/machine_learning_instruction/analysis_generator_1/report/GeneratorReportGeneratedSequences.csv
+        region_type: FULL_SEQUENCE
+        result_path: sequence_length_out/datasets/lstm1
+        separator: ','
+    lstm2:
+      format: Generic
+      params:
+        import_empty_aa_sequences: false
+        import_empty_nt_sequences: true
+        import_illegal_characters: false
+        is_repertoire: false
+        paired: false
+        path: LSTM2/machine_learning_instruction/analysis_generator_1/report/GeneratorReportGeneratedSequences.csv
+        region_type: FULL_SEQUENCE
+        result_path: sequence_length_out/datasets/lstm2
+        separator: ','
+    native:
+      format: Generic
+      params:
+        import_empty_aa_sequences: false
+        import_empty_nt_sequences: true
+        import_illegal_characters: false
+        is_repertoire: false
+        paired: false
+        path: Datasets/sequences_under_30.tsv
+        region_type: FULL_SEQUENCE
+        result_path: sequence_length_out/datasets/native
+        separator: "\t"
+    pwm:
+      format: Generic
+      params:
+        import_empty_aa_sequences: false
+        import_empty_nt_sequences: true
+        import_illegal_characters: false
+        is_repertoire: false
+        paired: false
+        path: PWM/HTML_output/machine_learning_instruction_analysis_generator_1_report_GeneratorReportGeneratedSequences.csv
+        region_type: FULL_SEQUENCE
+        result_path: sequence_length_out/datasets/pwm
+        separator: ','
+  encodings:
+    e1: KmerFrequency
+  ml_methods: {}
+  motifs: {}
+  preprocessing_sequences: {}
+  reports:
+    sequence_length_distribution:
+      SequenceLengthDistribution:
+        name: sequence_length_distribution
+        sequence_type: amino_acid
+  signals: {}
+  simulations: {}
+instructions:
+  machine_learning_instruction:
+    analyses:
+      lstm1:
+        dataset: lstm1
+        encoding: e1
+        report: sequence_length_distribution
+      lstm2:
+        dataset: lstm2
+        encoding: e1
+        report: sequence_length_distribution
+      native:
+        dataset: native
+        encoding: e1
+        report: sequence_length_distribution
+      pwm:
+        dataset: pwm
+        encoding: e1
+        report: sequence_length_distribution
+    number_of_processes: 4
+    type: ExploratoryAnalysis
+output:
+  format: HTML

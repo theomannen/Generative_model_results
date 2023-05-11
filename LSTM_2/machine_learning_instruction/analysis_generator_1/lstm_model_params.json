@@ -1,0 +1,1 @@
+{"epochs": 5, "batch_size": 8, "buffer_size": 1000, "vocab_size": 21, "embedding_dim": 32, "rnn_units": 128, "first_sequence": [1, 0, 14, 14, 3, 2, 9, 9, 18, 15, 9, 19, 0, 10, 2, 19, 18, 20]}

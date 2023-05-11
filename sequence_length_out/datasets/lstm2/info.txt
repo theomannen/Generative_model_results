@@ -1,0 +1,2 @@
+immuneML_version: 2.2.4
+Python_version: 3.7.9

@@ -1,0 +1,85 @@
+definitions:
+  datasets:
+    PWM:
+      format: Generic
+      params:
+        path: datasets/pwm_native_merge.tsv
+        is_repertoire: False
+        separator: "\t"
+        paired: False
+        region_type: FULL_SEQUENCE
+        metadata_column_mapping:
+          origin: origin
+    LSTM1:
+      format: Generic
+      params:
+        path: datasets/lstm1_native_merge.tsv
+        is_repertoire: False
+        separator: "\t"
+        paired: False
+        region_type: FULL_SEQUENCE
+        metadata_column_mapping:
+          origin: origin
+    lstm2:
+      format: Generic
+      params:
+        path: datasets/lstm2_native_merge.tsv
+        is_repertoire: False
+        separator: "\t"
+        paired: False
+        region_type: FULL_SEQUENCE
+        metadata_column_mapping:
+          origin: origin
+    VAE1:
+      format: Generic
+      params:
+        path: datasets/VAE1_native_merge.tsv
+        is_repertoire: False
+        separator: "\t"
+        paired: False
+        region_type: FULL_SEQUENCE
+        metadata_column_mapping:
+          origin: origin
+    VAE2:
+      format: Generic
+      params:
+        path: datasets/VAE2_native_merge.tsv
+        is_repertoire: False
+        separator: "\t"
+        paired: False
+        region_type: FULL_SEQUENCE
+        metadata_column_mapping:
+          origin: origin
+  encodings:
+    e1: KmerFrequency
+  reports:
+    kmer_feature_comparison:
+      FeatureComparison:
+        comparison_label: origin
+        opacity: 0.5
+        show_error_bar: False
+        log_scale: True
+instructions:
+  machine_learning_instruction:
+    type: ExploratoryAnalysis
+    analyses:
+      PWM:
+        dataset: PWM
+        encoding: e1
+        report: kmer_feature_comparison
+      LSTM1:
+        dataset: LSTM1
+        encoding: e1
+        report: kmer_feature_comparison
+      LSTM2:
+        dataset: LSTM2
+        encoding: e1
+        report: kmer_feature_comparison
+      VAE1:
+        dataset: VAE1
+        encoding: e1
+        report: kmer_feature_comparison
+      VAE2:
+        dataset: VAE2
+        encoding: e1
+        report: kmer_feature_comparison

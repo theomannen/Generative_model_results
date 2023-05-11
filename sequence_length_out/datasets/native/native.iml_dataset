@@ -1,0 +1,12 @@
+dataset_class: SequenceDataset
+element_class_name: ReceptorSequence
+element_ids: null
+file_size: 50000
+filenames:
+- batch_0.npy
+identifier: 27afb6e798954fa7948bfb5b5873e604
+labels:
+  organism: null
+  receptor_chains: null
+  region_type: FULL_SEQUENCE
+name: native

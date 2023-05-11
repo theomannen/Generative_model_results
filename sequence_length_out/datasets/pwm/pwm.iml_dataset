@@ -1,0 +1,12 @@
+dataset_class: SequenceDataset
+element_class_name: ReceptorSequence
+element_ids: null
+file_size: 50000
+filenames:
+- batch_0.npy
+identifier: f397aff4994e4a248e9a8a0046ff93fb
+labels:
+  organism: null
+  receptor_chains: null
+  region_type: FULL_SEQUENCE
+name: pwm

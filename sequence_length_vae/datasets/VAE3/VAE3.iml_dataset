@@ -1,0 +1,12 @@
+dataset_class: SequenceDataset
+element_class_name: ReceptorSequence
+element_ids: null
+file_size: 50000
+filenames:
+- batch_0.npy
+identifier: 89e62dbb47cb43468f68948ef09a0a29
+labels:
+  organism: null
+  receptor_chains: null
+  region_type: FULL_SEQUENCE
+name: VAE3

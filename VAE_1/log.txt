@@ -1,0 +1,43 @@
+2023-05-03 08:32:41,471 INFO: Setting temporary cache path to VAE_train_out/cache
+2023-05-03 08:32:41,471 INFO: ImmuneML: parsing the specification...
+
+2023-05-03 08:32:41,485 INFO: --- Entering: parse_encoder with parameters ('e1', 'OneHot')
+2023-05-03 08:32:42,910 INFO: --- Exiting: parse_encoder
+2023-05-03 08:32:42,910 INFO: --- Entering: _parse_ml_method with parameters ('G1', {'VAE': {'cores_for_training': 8, 'batch_size': 64, 'layers': 4, 'latent_dim': 4, 'epochs': 20}})
+2023-05-03 08:33:09,260 INFO: --- Exiting: _parse_ml_method
+2023-05-03 08:33:09,262 INFO: --- Entering: _parse_report with parameters ('GeneratorReport', 'GeneratorReportLSTM', SymbolTable())
+2023-05-03 08:33:11,046 INFO: Failed to extract font properties from /System/Library/Fonts/Apple Color Emoji.ttc: In FT2Font: Could not set the fontsize (error code 0x17)
+2023-05-03 08:33:13,034 INFO: Failed to extract font properties from /System/Library/Fonts/Supplemental/NISC18030.ttf: In FT2Font: Could not set the fontsize (error code 0x17)
+2023-05-03 08:33:13,841 INFO: Failed to extract font properties from /System/Library/Fonts/LastResort.otf: tuple indices must be integers or slices, not str
+2023-05-03 08:33:14,274 INFO: DefaultParams: no default parameters were found for GeneratorReportLSTM. Proceeding...
+2023-05-03 08:33:14,275 INFO: --- Exiting: _parse_report
+2023-05-03 08:33:14,276 INFO: --- Entering: _parse_dataset with parameters ('d1', {'format': 'Generic', 'params': {'path': 'LSTM_dataset/sequences_under_30.tsv', 'is_repertoire': False, 'paired': False, 'region_type': 'FULL_SEQUENCE'}}, SymbolTable(), PosixPath('VAE_train_out'))
+2023-05-03 08:33:18,683 INFO: --- Exiting: _parse_dataset
+2023-05-03 08:33:18,686 INFO: --- Entering: parse_instruction with parameters ('machine_learning_instruction', {'type': 'GenerativeModel', 'generators': {'generator_1': {'dataset': 'd1', 'encoding': 'e1', 'ml_method': 'G1', 'report': 'GeneratorReport', 'amount': 20000}}}, SymbolTable(), PosixPath('VAE_train_out'))
+2023-05-03 08:33:18,703 INFO: DefaultParams: no default parameters were found for GenerativeModel. Proceeding...
+2023-05-03 08:33:18,745 INFO: --- Exiting: parse_instruction
+2023-05-03 08:33:18,749 INFO: Full specification is available at VAE_train_out/full_generative_VAE.yaml.
+
+2023-05-03 08:33:18,749 INFO: ImmuneML: starting the analysis...
+
+2023-05-03 08:33:18,749 INFO: Instruction 1/1 has started.
+2023-05-03 08:33:18,749 INFO: Encoding started...
+2023-05-03 08:33:23,058 INFO: Encoding finished.
+2023-05-03 08:33:26,224 WARNING: From /Users/theodorbergersen/IFI/Master/test_implementation/venv/lib/python3.7/site-packages/keras/layers/normalization/batch_normalization.py:561: _colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+2023-05-03 08:34:42,430 WARNING: `Model.state_updates` will be removed in a future version. This property should not be used in TensorFlow 2.0, as `updates` are applied automatically.
+2023-05-03 09:00:16,135 INFO: Finished training
+2023-05-03 09:00:20,125 WARNING: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 4 of 4). These functions will not be directly callable after loading.
+2023-05-03 09:00:21,328 INFO: Assets written to: VAE_train_out/machine_learning_instruction/analysis_generator_1/VAE_encoder/assets
+2023-05-03 09:00:27,395 WARNING: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 6). These functions will not be directly callable after loading.
+2023-05-03 09:00:28,817 INFO: Assets written to: VAE_train_out/machine_learning_instruction/analysis_generator_1/VAE_decoder/assets
+2023-05-03 09:00:41,447 WARNING: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 10). These functions will not be directly callable after loading.
+2023-05-03 09:00:45,336 INFO: Assets written to: VAE_train_out/machine_learning_instruction/analysis_generator_1/VAE/assets
+2023-05-03 09:00:46,526 WARNING: `Model.state_updates` will be removed in a future version. This property should not be used in TensorFlow 2.0, as `updates` are applied automatically.
+2023-05-03 09:19:07,172 INFO: Finished generation
+2023-05-03 09:19:17,074 INFO: Instruction 1/1 has finished.
+2023-05-03 09:19:17,296 INFO: Generating HTML reports...
+2023-05-03 09:19:18,866 INFO: HTML reports are generated.
+2023-05-03 09:19:18,896 INFO: ImmuneML: finished analysis.
+

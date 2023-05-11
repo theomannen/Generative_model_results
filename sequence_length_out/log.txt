@@ -1,0 +1,56 @@
+2023-04-25 21:16:22,371 INFO: Setting temporary cache path to sequence_length_out\cache
+2023-04-25 21:16:22,371 INFO: ImmuneML: parsing the specification...
+
+2023-04-25 21:16:22,377 INFO: --- Entering: parse_encoder with parameters ('e1', 'KmerFrequency')
+2023-04-25 21:16:22,629 INFO: --- Exiting: parse_encoder
+2023-04-25 21:16:22,629 INFO: --- Entering: _parse_report with parameters ('sequence_length_distribution', 'SequenceLengthDistribution', SymbolTable())
+2023-04-25 21:16:23,811 INFO: --- Exiting: _parse_report
+2023-04-25 21:16:23,812 INFO: --- Entering: _parse_dataset with parameters ('native', {'format': 'Generic', 'params': {'path': 'LSTM_dataset/sequences_under_30.tsv', 'is_repertoire': False, 'separator': '\t', 'paired': False, 'region_type': 'FULL_SEQUENCE'}}, SymbolTable(), WindowsPath('sequence_length_out'))
+2023-04-25 21:16:26,879 INFO: --- Exiting: _parse_dataset
+2023-04-25 21:16:26,879 INFO: --- Entering: _parse_dataset with parameters ('pwm', {'format': 'Generic', 'params': {'path': 'PWM_out/HTML_output/machine_learning_instruction_analysis_generator_1_report_GeneratorReportGeneratedSequences.csv', 'is_repertoire': False, 'separator': ',', 'paired': False, 'region_type': 'FULL_SEQUENCE'}}, SymbolTable(), WindowsPath('sequence_length_out'))
+2023-04-25 21:16:28,663 INFO: --- Exiting: _parse_dataset
+2023-04-25 21:16:28,663 INFO: --- Entering: _parse_dataset with parameters ('lstm1', {'format': 'Generic', 'params': {'path': 'LSTM_out_1024/machine_learning_instruction/analysis_generator_1/report/GeneratorReportGeneratedSequences.csv', 'is_repertoire': False, 'separator': ',', 'paired': False, 'region_type': 'FULL_SEQUENCE'}}, SymbolTable(), WindowsPath('sequence_length_out'))
+2023-04-25 21:16:30,543 INFO: --- Exiting: _parse_dataset
+2023-04-25 21:16:30,543 INFO: --- Entering: _parse_dataset with parameters ('lstm2', {'format': 'Generic', 'params': {'path': 'LSTM_out_128/machine_learning_instruction/analysis_generator_1/report/GeneratorReportGeneratedSequences.csv', 'is_repertoire': False, 'separator': ',', 'paired': False, 'region_type': 'FULL_SEQUENCE'}}, SymbolTable(), WindowsPath('sequence_length_out'))
+2023-04-25 21:16:32,454 INFO: --- Exiting: _parse_dataset
+2023-04-25 21:16:32,455 INFO: --- Entering: parse_instruction with parameters ('machine_learning_instruction', {'type': 'ExploratoryAnalysis', 'analyses': {'native': {'dataset': 'native', 'encoding': 'e1', 'report': 'sequence_length_distribution'}, 'pwm': {'dataset': 'pwm', 'encoding': 'e1', 'report': 'sequence_length_distribution'}, 'lstm1': {'dataset': 'lstm1', 'encoding': 'e1', 'report': 'sequence_length_distribution'}, 'lstm2': {'dataset': 'lstm2', 'encoding': 'e1', 'report': 'sequence_length_distribution'}}}, SymbolTable(), WindowsPath('sequence_length_out'))
+2023-04-25 21:16:32,563 INFO: --- Exiting: parse_instruction
+2023-04-25 21:16:32,571 INFO: Full specification is available at sequence_length_out\full_sequence_length_comparison.yaml.
+
+2023-04-25 21:16:32,571 INFO: ImmuneML: starting the analysis...
+
+2023-04-25 21:16:32,571 INFO: Instruction 1/1 has started.
+2023-04-25 21:16:32,572 INFO: Started analysis native (1/4).
+2023-04-25 21:16:32,572 INFO: Encoding started...
+2023-04-25 21:16:40,910 INFO: Encoding finished.
+2023-04-25 21:16:42,449 INFO: Finished analysis native (1/4).
+
+2023-04-25 21:16:42,449 INFO: Started analysis pwm (2/4).
+2023-04-25 21:16:42,449 INFO: Encoding started...
+2023-04-25 21:16:48,854 INFO: Encoding finished.
+2023-04-25 21:16:49,454 INFO: Finished analysis pwm (2/4).
+
+2023-04-25 21:16:49,454 INFO: Started analysis lstm1 (3/4).
+2023-04-25 21:16:49,454 INFO: Encoding started...
+2023-04-25 21:16:50,110 WARNING: KmerSequenceEncoder: Sequence length 1 is less than 3. Ignoring sequence...
+2023-04-25 21:16:56,124 INFO: Encoding finished.
+2023-04-25 21:16:56,706 INFO: Finished analysis lstm1 (3/4).
+
+2023-04-25 21:16:56,706 INFO: Started analysis lstm2 (4/4).
+2023-04-25 21:16:56,707 INFO: Encoding started...
+2023-04-25 21:16:57,172 WARNING: KmerSequenceEncoder: Sequence length 2 is less than 3. Ignoring sequence...
+2023-04-25 21:16:57,185 WARNING: KmerSequenceEncoder: Sequence length 1 is less than 3. Ignoring sequence...
+2023-04-25 21:16:57,261 WARNING: KmerSequenceEncoder: Sequence length 2 is less than 3. Ignoring sequence...
+2023-04-25 21:16:57,264 WARNING: KmerSequenceEncoder: Sequence length 1 is less than 3. Ignoring sequence...
+2023-04-25 21:16:57,267 WARNING: KmerSequenceEncoder: Sequence length 1 is less than 3. Ignoring sequence...
+2023-04-25 21:16:57,270 WARNING: KmerSequenceEncoder: Sequence length 2 is less than 3. Ignoring sequence...
+2023-04-25 21:16:57,401 WARNING: KmerSequenceEncoder: Sequence length 2 is less than 3. Ignoring sequence...
+2023-04-25 21:16:57,437 WARNING: KmerSequenceEncoder: Sequence length 1 is less than 3. Ignoring sequence...
+2023-04-25 21:17:03,055 INFO: Encoding finished.
+2023-04-25 21:17:03,601 INFO: Finished analysis lstm2 (4/4).
+
+2023-04-25 21:17:03,601 INFO: Instruction 1/1 has finished.
+2023-04-25 21:17:03,617 INFO: Generating HTML reports...
+2023-04-25 21:17:06,559 INFO: HTML reports are generated.
+2023-04-25 21:17:06,568 INFO: ImmuneML: finished analysis.
+

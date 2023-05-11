@@ -1,0 +1,48 @@
+definitions:
+  datasets:
+    d1:
+      format: Generic
+      params:
+        import_empty_aa_sequences: false
+        import_empty_nt_sequences: true
+        import_illegal_characters: false
+        is_repertoire: false
+        paired: false
+        path: Datasets/sequences_under_30.tsv
+        region_type: FULL_SEQUENCE
+        result_path: LSTM_out_1024/datasets/d1
+        separator: "\t"
+  encodings:
+    e1: CharToInt
+  ml_methods:
+    G1:
+      LSTM:
+        batch_size: 64
+        buffer_size: 1000
+        embedding_dim: 256
+        epochs: 20
+        max_sequence_length: 42
+        rnn_units: 1024
+        amount: 20000
+        sequence_type: sequence_aas
+      model_selection_cv: false
+      model_selection_n_folds: -1
+  motifs: {}
+  preprocessing_sequences: {}
+  reports:
+    GeneratorReport:
+      NeuralNetGeneratorReport:
+        name: GeneratorReport
+  signals: {}
+  simulations: {}
+instructions:
+  machine_learning_instruction:
+    generators:
+      generator_1:
+        dataset: d1
+        encoding: e1
+        ml_method: G1
+        report: GeneratorReport
+    type: GenerativeModel
+output:
+  format: HTML
